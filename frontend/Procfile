@@ -1,0 +1,2 @@
+echo Profile script is being executed!
+npm install bootstrap@next
