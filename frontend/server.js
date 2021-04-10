@@ -1,10 +1,4 @@
-const http = require('http');
-const express = require('express');
-const PORT = process.env.PORT || 3000;
+const connect = require('connect');
+var static = require('serve-static');
 
-const app = express();
-const server = http.createServer(app);
-
-server.listen(port, () => {
-  console.log('Server running on port: ${port}');
-});
+connect().use(static('views/')).listen(8080, () => console.log('Server running on port 8080'));
