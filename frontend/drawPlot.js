@@ -67,6 +67,7 @@ function printCoords()  {
       }
       ctz.stroke();
       ctz.closePath();
+      console.log('drawing');
     }
   }
   else {
