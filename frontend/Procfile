@@ -1,2 +1,4 @@
 echo Profile script is being executed!
-npm install bootstrap@next
+npm install bootstrap@next --save
+npm install express --save
+node server.js
