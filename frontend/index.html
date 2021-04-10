@@ -16,16 +16,19 @@
     </nav>
     <div class="container-fluid">
       <div class="row justify-content-center p-5">
-        <div class="col-md-auto my-auto" >
+        <div class="col-4 my-auto" >
             <h1>Graphicc<br /></h1>
 
-              <label for="input">Equation:</label>
+              <label for="input" class="form-label">Equation:</label>
               <input type="text" id="input" name="input">
-              <button class="btn-primary rounded" onclick="submit();" >Submit</button>
+              <button class="btn-primary rounded" onclick="submit();">Submit</button>
+              <br />
+              <label for="range-slider" class="form-label">Plot range:</label><br />
+              <input id="range-slider" type="range" class="form-range" min="10" max="200" step="2" value="50" onchange="drawPlot();" oninput="drawPlot();" />
         </div>
 
-        <div class="col col-lg my-auto" align="center" style="overflow-x: hidden;">
-          <canvas id="graphArea" class="image-responsive" width = "800px" height = "800px" style="border:2px solid #000000;">Your browser does not support HTML5</canvas>
+        <div id="graphContainer" class="col-8 my-auto" align="center">
+          <canvas id="graphArea" class="image-responsive" height="500px" width="500px">Your browser does not support HTML5</canvas>
         </div>
       </div>
     </div>
