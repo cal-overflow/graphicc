@@ -11,30 +11,36 @@
     <link rel="stylesheet" href="index.css" type="text/css" />
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
   </head>
-  <body onload="drawPlot();" class="bg-light">
-    <nav class="navbar navbar-light bg-dark">
-      <a class="navbar-toggler mx-auto">
-        <img id="logo" class="rounded" title="Graphicc" alt="" src="graphicc.png" />
-      </a>
-    </nav>
-    <div class="container-fluid">
-      <div class="row justify-content-center p-5">
-        <div class="col-md-4 my-auto pb-4">
-            <h2>Graphicc<br /></h2>
+  <body onload="drawPlot();" class="bg-light d-flex flex-column">
+    <main class="flex-fill">
+      <nav class="navbar navbar-light bg-dark">
+        <a class="navbar-toggler mx-auto">
+          <img id="logo" class="rounded" title="Graphicc" alt="" src="graphicc.png" />
+        </a>
+      </nav>
+      <div class="container-fluid">
+        <div class="row justify-content-center p-5">
+          <div class="col-lg-4 my-auto pb-4">
+              <h2>Graphicc<br /></h2>
 
-              <label for="input" class="form-label">Enter an equation</label><br />
-              <input type="text" id="equation_input" name="input">
-              <button class="btn-primary rounded mt-2" onclick="submit();">Submit</button>
-              <br />
-              <label for="range-slider" class="form-label text-center">Plot range:</label><br />
-              <input id="range-slider" type="range" class="bg-secondary slider" min="10" max="100" step="2" value="50" onchange="drawPlot();" oninput="drawPlot();" />
-        </div>
+                <label for="input" class="form-label">Enter an equation</label><br />
+                <input type="text" id="equation_input" name="input">
+                <button class="btn-primary rounded mt-2" onclick="submit();">Submit</button>
+                <br />
+                <label for="range-slider" class="form-label text-center">Plot range:</label><br />
+                <input id="range-slider" type="range" class="bg-secondary slider" min="10" max="100" step="2" value="50" onchange="drawPlot();" oninput="drawPlot();" />
+          </div>
 
-        <div id="graphContainer" class="col-md-8 my-auto" align="center">
-          <canvas id="graphArea" class="image-responsive border border-dark" height="500px" width="500px">Your browser does not support HTML5</canvas>
+          <div class="col-lg-8 my-auto" align="center">
+            <div id="graphContainer">
+              <canvas id="graphArea" class="image-responsive border border-dark" height="500px" width="500px">Your browser does not support HTML5</canvas>
+            </div>
+            <output for="range-slider" class="text-center"><h4 id="range-display"></h4></output>
+          </div>
         </div>
       </div>
-    </div>
+    <div style="height: 100px;"></div>
+    </main>
 
     <footer class="fixed-bottom bg-dark text-light text-center">
       <p>Credits</p>

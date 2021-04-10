@@ -1,3 +1,7 @@
+body  {
+  min-height: 100vh; /*Prevent footer from overlapping page content*/
+}
+
 #logo {
   max-height: 100px;
 }
@@ -8,6 +12,7 @@
 
 #range-slider {
   -webkit-appearance: none;
+  float: left;
   width: 100%;
   max-width: 500px;
   height: 10px;

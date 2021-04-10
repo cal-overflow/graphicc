@@ -41,6 +41,8 @@ function drawPlot() {
   ctx.stroke();
   ctx.closePath();
   printCoords();
+
+  updateRange();
 }
 function setCoords(xCords, yCords)
 {
@@ -77,4 +79,11 @@ function printCoords()
   else {
     //console.log("NO CORDS!");
   }
+}
+
+function updateRange()  {
+  const size = document.getElementById('range-slider').value;
+  const output = document.getElementById('range-display');
+  var r =  (0 - size / 2) + " < x < " + (size / 2);
+  output.innerHTML = r;
 }
