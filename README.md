@@ -1,6 +1,13 @@
 # graphicc
-2020 Code Camp hackathon project
+
+2021 Code Camp hackathon project
 
 Members:
 
--- members here --
+Carter Moseley
+
+Kobe Hass
+
+Christian Lisle
+
+Carter Brimeyer
