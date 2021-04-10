@@ -1,8 +1,7 @@
+var colors = {'grid': '#C0C0C0', 'axis': '#000000', 'line': '#FF0000'}
 var xCord, yCord;
 var gotCoords;
 function drawPlot() {
-
-  const colors = {'grid': '#C0C0C0', 'axis': '#000000', 'line': '#FF0000'}
   const graph = document.getElementById('graphArea');
   const width = graph.width;
   const height = graph.height;
@@ -44,37 +43,31 @@ function drawPlot() {
 
   updateRange();
 }
-function setCoords(xCords, yCords)
-{
+function setCoords(xCords, yCords)  {
   xCord = xCords;
   yCord = yCords;
   gotCoords = true;
 }
-function printCoords()
-{
-  if(gotCoords)
-  {
+
+function printCoords()  {
+  if(gotCoords) {
     console.log(xCord);
     console.log(yCord);
     var scale = (((110 - document.getElementById('range-slider').value) / document.getElementById('range-slider').value) * 5); // NOT EXACTLY CORRECT
-    const color = {'grid': '#C0C0C0', 'axis': '#000000', 'line': '#FF0000'}
     const graph = document.getElementById('graphArea');
     const ctz = graph.getContext('2d');
     midW = graph.width / 2;
     midH = graph.height / 2;
-    for(i = 0; i < xCord.length; i++)
-    {
-      ctz.strokeStyle = color.line;
+    for(i = 0; i < xCord.length; i++) {
+      ctz.strokeStyle = colors.line;
       ctz.beginPath();
       ctz.moveTo((scale * xCord[i]) + midW, (scale * - yCord[i]) + midH);
-      if(i != 0)
-      {
+      if(i != 0)  {
         ctz.lineTo((scale * xCord[i-1]) + midW, (scale * - yCord[i-1]) + midH);
       }
       ctz.stroke();
       ctz.closePath();
     }
-    console.log("DONE!");
   }
   else {
     //console.log("NO CORDS!");
@@ -86,4 +79,9 @@ function updateRange()  {
   const output = document.getElementById('range-display');
   var r =  (0 - size / 2) + " < x < " + (size / 2);
   output.innerHTML = r;
+}
+
+function changeColor(color) {
+    colors.line = document.getElementById(color).style.backgroundColor;
+    drawPlot(); // update plot after color change
 }

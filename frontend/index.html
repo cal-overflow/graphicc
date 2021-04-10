@@ -22,13 +22,29 @@
         <div class="row justify-content-center p-5">
           <div class="col-lg-4 my-auto pb-4">
               <h2>Graphicc<br /></h2>
+              <h5>You're favorite graphing calculator</h5><br />
+              <h5>Supported operators:</h5>
+              <h5> &#43;, &#8722;, &#8727;, &#247;, &#37;, and ^</h5>
+              <HR >
 
                 <label for="input" class="form-label">Enter an equation</label><br />
-                <input type="text" id="equation_input" name="input">
+                <input type="text" id="equation_input" name="input" class="form-control">
                 <button class="btn-primary rounded mt-2" onclick="submit();">Submit</button>
-                <br />
-                <label for="range-slider" class="form-label text-center">Plot range:</label><br />
-                <input id="range-slider" type="range" class="bg-secondary slider" min="10" max="100" step="2" value="50" onchange="drawPlot();" oninput="drawPlot();" />
+
+                <HR>
+
+                <div id="supported-operators" class="mt-5">
+                  <div id="slider" class="d-none d-md-block">
+                    <label for="range-slider" class="form-label text-center">Plot range:</label><br />
+                    <input id="range-slider" type="range" class="bg-secondary slider" min="10" max="100" step="2" value="50" onchange="drawPlot();" oninput="drawPlot();" />
+                  </div>
+                  <br />
+                  <label for="color-selector">Color:</label><br />
+                  <button id="red" class="radio" onclick="changeColor('red');" style="background-color: #FF0000;"></button>
+                  <button id="blue" class="radio" onclick="changeColor('blue');" style="background-color: #007bff;"></button>
+                  <button id="green" class="radio" onclick="changeColor('green');" style="background-color: #28a745;"></button>
+                  <button id="yellow" class="radio" onclick="changeColor('yellow');" style="background-color: #ffc107;"></button>
+                </div>
           </div>
 
           <div class="col-lg-8 my-auto" align="center">
