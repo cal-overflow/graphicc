@@ -1,13 +1,19 @@
 # graphicc
+Webapp graphing calculator.
+Built for a 2021 Code Camp Hackathon event. 24 hour time limit.
 
-2021 Code Camp hackathon project
+## Frontend:
+HTML, CSS, JavaScript, BootStrap, and a little bit of NodeJS [trickery](https://stackoverflow.com/a/43268098/10475867) to handle JSON requests.
 
-Members:
+## Backend:
+Java, Spring Framework, and MySQL.
 
+### Members:
+##### Backend
 Carter Moseley
 
 Kobe Hass
-
-Christian Lisle
+##### Frontend
+[Christian Lisle](http://christianlisle.com)
 
 Carter Brimeyer
