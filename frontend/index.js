@@ -1,4 +1,5 @@
-const serverURL = "https://8256c7bf-2e3d-4402-9260-69d9f4ec1717.mock.pstmn.io";//Change me to the localhost/springboot server address
+//const serverURL = "https://8256c7bf-2e3d-4402-9260-69d9f4ec1717.mock.pstmn.io";//Change me to the localhost/springboot server address
+const serverURL = "http://127.0.0.1:3306";
 
 function submit()
 {
