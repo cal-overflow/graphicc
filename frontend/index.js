@@ -2,7 +2,15 @@
 const serverURL = "https://secret-beyond-18338.herokuapp.com/http://97.125.225.123:8080";
 
 function submit() {
-  postRequest(serverURL + "/equationIn/" + document.getElementById("equation_input").value);
+  let equation = document.getElementById("equation_input").value;
+  var encoded_eqation = '';
+  for (var i = 0; i < equation.length; i++) {
+    if (equation.charAt(i) == '/') encoded_eqation += '~';
+    else if (equation.charAt(i) == '^') encoded_eqation += '@';
+    else if (equation.charAt(i) == '%') encoded_eqation += '_';
+    else encoded_eqation += equation.charAt(i);
+  }
+  postRequest(serverURL + "/equationIn/" + encoded_eqation);
 }
 
 function getRequest(url)  {
@@ -52,7 +60,6 @@ function parseCoords(html){
     xCords.push(parseInt(temp[0]));
     yCords.push(parseInt(temp[1]));
   }*/
-  drawPlot();
   setCoords(xCords, yCords);
-  printCoords();
+  drawPlot();
 }
