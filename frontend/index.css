@@ -34,11 +34,6 @@ button.radio  {
   transition: opacity .2s;
 }
 
-#range-slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-}
-
 #range-slider::-moz-range-thumb, #range-slider::-webkit-slider-thumb {
   width: 10px;
   height: 20px;
