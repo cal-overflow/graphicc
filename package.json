@@ -1,0 +1,19 @@
+{
+  "name": "graphicc",
+  "version": "1.0.0",
+  "description": "2021 Code Camp hackathon project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChristianLisle/graphicc.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChristianLisle/graphicc/issues"
+  },
+  "homepage": "https://github.com/ChristianLisle/graphicc#readme"
+}
