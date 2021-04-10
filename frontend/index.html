@@ -4,11 +4,12 @@
     <meta charset="utf-8" />
     <title>Graphicc | Your Favorite Graphing Calculator</title>
     <script src="index.js"></script>
+    <script src="drawPlot.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="index.css" type="text/css" />
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
   </head>
-  <body class="bg-light">
+  <body onload="drawPlot();" class="bg-light">
     <nav class="navbar navbar-light bg-dark">
       <a class="navbar-toggler mx-auto">
         <img id="logo" class="rounded" title="Graphicc" alt="" src="graphicc.png" />
@@ -24,7 +25,7 @@
               <button class="btn-primary rounded" onclick="submit();">Submit</button>
               <br />
               <label for="range-slider" class="form-label">Plot range:</label><br />
-              <input id="range-slider" type="range" class="form-range" min="10" max="200" step="2" value="50" onchange="drawPlot();" oninput="drawPlot();" />
+              <input id="range-slider" type="range" class="form-range" min="10" max="100" step="2" value="50" onchange="drawPlot();" oninput="drawPlot();" />
         </div>
 
         <div id="graphContainer" class="col-8 my-auto" align="center">
@@ -42,7 +43,7 @@
         <a>Kobe Hass</a>
       </p>
     </footer>
-    <script src="drawPlot.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.4/qs.min.js" integrity="sha512-BHtomM5XDcUy7tDNcrcX1Eh0RogdWiMdXl3wJcKB3PFekXb3l5aDzymaTher61u6vEZySnoC/SAj2Y/p918Y3w==" crossorigin="anonymous"></script
   </body>
 </html>
