@@ -51,8 +51,6 @@ function setCoords(xCords, yCords)  {
 
 function printCoords()  {
   if(gotCoords) {
-    console.log(xCord);
-    console.log(yCord);
     var scale = (((110 - document.getElementById('range-slider').value) / document.getElementById('range-slider').value) * 5); // NOT EXACTLY CORRECT
     const graph = document.getElementById('graphArea');
     const ctz = graph.getContext('2d');
@@ -67,7 +65,6 @@ function printCoords()  {
       }
       ctz.stroke();
       ctz.closePath();
-      console.log('drawing');
     }
   }
   else {

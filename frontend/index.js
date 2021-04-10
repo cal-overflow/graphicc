@@ -52,8 +52,6 @@ function parseCoords(html){
     xCords.push(parseInt(temp[0]));
     yCords.push(parseInt(temp[1]));
   }*/
-  console.log('x:' + xCords);
-  console.log('y:' + yCords);
   drawPlot();
   setCoords(xCords, yCords);
   printCoords();
