@@ -1,8 +1,8 @@
-const serverURL = "https://8256c7bf-2e3d-4402-9260-69d9f4ec1717.mock.pstmn.io";
+const serverURL = "https://8256c7bf-2e3d-4402-9260-69d9f4ec1717.mock.pstmn.io";//Change me to the localhost/springboot server address
 
 function submit()
 {
-  postRequest(serverURL + "/test");
+  postRequest(serverURL + "/equationIn/" + document.getElementById("input").value);
 }
 function getRequest(url)
 {
@@ -17,14 +17,18 @@ function getRequest(url)
 function postRequest(url)
 {
   fetch(url,{
-    method: "POST",
-    body : JSON.stringify({
-        equation : "x^2"
-      })
+    method: "POST"
   }).then(
-    response => response.text()
+    response => {
+      if(!response.ok)
+      {
+        alert("Please check your equation!");
+        throw new Error('Network response failed!');
+      }
+      return response.text();
+    }
   ).then(
-    html => parseCoords(html)
+      html => parseCoords(html)
   );
 }
 function parseCoords(html){
@@ -41,6 +45,7 @@ function parseCoords(html){
     xCords.push(parseInt(temp[0]));
     yCords.push(parseInt(temp[1]));
   }
-  console.log(xCords);
-  console.log(yCords);
+  drawPlot();
+  setCoords(xCords, yCords);
+  printCoords();
 }
