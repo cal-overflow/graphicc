@@ -2,6 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <!-- Meta tag below is important for safari on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Graphicc | Your Favorite Graphing Calculator</title>
     <script src="index.js"></script>
     <script src="drawPlot.js"></script>
@@ -17,19 +19,19 @@
     </nav>
     <div class="container-fluid">
       <div class="row justify-content-center p-5">
-        <div class="col-4 my-auto" >
-            <h1>Graphicc<br /></h1>
+        <div class="col-md-4 my-auto pb-4">
+            <h2>Graphicc<br /></h2>
 
-              <label for="input" class="form-label">Equation:</label>
-              <input type="text" id="input" name="input">
-              <button class="btn-primary rounded" onclick="submit();">Submit</button>
+              <label for="input" class="form-label">Enter an equation</label><br />
+              <input type="text" id="equation_input" name="input">
+              <button class="btn-primary rounded mt-2" onclick="submit();">Submit</button>
               <br />
-              <label for="range-slider" class="form-label">Plot range:</label><br />
-              <input id="range-slider" type="range" class="form-range" min="10" max="100" step="2" value="50" onchange="drawPlot();" oninput="drawPlot();" />
+              <label for="range-slider" class="form-label text-center">Plot range:</label><br />
+              <input id="range-slider" type="range" class="bg-secondary slider" min="10" max="100" step="2" value="50" onchange="drawPlot();" oninput="drawPlot();" />
         </div>
 
-        <div id="graphContainer" class="col-8 my-auto" align="center">
-          <canvas id="graphArea" class="image-responsive" height="500px" width="500px">Your browser does not support HTML5</canvas>
+        <div id="graphContainer" class="col-md-8 my-auto" align="center">
+          <canvas id="graphArea" class="image-responsive border border-dark" height="500px" width="500px">Your browser does not support HTML5</canvas>
         </div>
       </div>
     </div>

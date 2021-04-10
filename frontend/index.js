@@ -2,7 +2,7 @@ const serverURL = "https://8256c7bf-2e3d-4402-9260-69d9f4ec1717.mock.pstmn.io";/
 
 function submit()
 {
-  postRequest(serverURL + "/equationIn/" + document.getElementById("input").value);
+  postRequest(serverURL + "/equationIn/" + document.getElementById("equation_input").value);
 }
 function getRequest(url)
 {
