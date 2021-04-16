@@ -1,4 +1,4 @@
-# [graphicc](https://eager-archimedes-6f5c73.netlify.app/)
+# [Graphicc](https://eager-archimedes-6f5c73.netlify.app/)
 Webapp graphing calculator.
 Built for a 2021 Code Camp Hackathon event. 24 hour time limit.
 
