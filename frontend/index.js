@@ -1,5 +1,6 @@
-//const serverURL = "https://8256c7bf-2e3d-4402-9260-69d9f4ec1717.mock.pstmn.io";//Change me to the localhost/springboot server address
-const serverURL = "https://secret-beyond-18338.herokuapp.com/http://97.125.225.123:8080";
+const serverURL = "https://secret-beyond-18338.herokuapp.com/http://127.0.0.1:8080";
+// http:127.0.0.1:8080 is placeholder for a spring (backend)server.
+// This has been changed from the actual backend IP, since it is no longer being hosted.
 
 function submit() {
   let equation = document.getElementById("equation_input").value;
@@ -50,16 +51,6 @@ function parseCoords(html){
     xCords.push(parseInt(points[i].split(':')[0]));
     yCords.push(parseInt(points[i].split(':')[1]));
   }
-  /*for(i = 0; i < lines.length; i++)
-  {
-    lines[i] = lines[i].replaceAll('\"', '');
-    lines[i] = lines[i].replaceAll(',', '');
-    lines[i] = lines[i].replaceAll(' ', '');
-    temp = lines[i].split(':');
-    console.log(temp);
-    xCords.push(parseInt(temp[0]));
-    yCords.push(parseInt(temp[1]));
-  }*/
   setCoords(xCords, yCords);
   drawPlot();
 }
