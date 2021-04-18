@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!-- Meta tag below is important for safari on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Graphicc | Your Favorite Graphing Calculator</title>
+    <script src="index.js"></script>
+    <script src="drawPlot.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css" type="text/css" />
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+  </head>
+  <body onload="drawPlot();" class="bg-light d-flex flex-column">
+    <main class="flex-fill">
+      <nav class="navbar navbar-light bg-dark">
+        <a class="navbar-toggler mx-auto">
+          <img id="logo" class="rounded" title="Graphicc" alt="" src="graphicc.png" />
+        </a>
+      </nav>
+      <div class="container">
+        <div class="row justify-content-center p-5">
+          <div class="col-lg-4 my-auto pb-4">
+              <h2>Graphicc<br /></h2>
+              <h5>Your favorite graphing calculator</h5><br />
+              <h5>Supported operators:</h5>
+              <h5> &#43;, &#8722;, &#8727;, &#247;, &#37;, and ^</h5>
+              <HR >
+
+                <label for="input" class="form-label">Enter an equation</label><br />
+                <input type="text" id="equation_input" name="input" class="form-control" placeholder="x^2" onfocus="this.placeholder=''">
+                <button class="btn-primary rounded mt-2" onclick="submit();">Submit</button>
+
+                <HR>
+
+                <div id="supported-operators" class="mt-5">
+                  <div id="slider" class="d-none d-md-block">
+                    <label for="range-slider" class="form-label text-center">Plot range:</label><br />
+                    <input id="range-slider" type="range" class="bg-secondary slider" min="10" max="100" step="2" value="50" onchange="drawPlot();" oninput="drawPlot();" />
+                  </div>
+                  <br />
+                  <label for="color-selector">Color:</label><br />
+                  <button id="red" class="radio" onclick="changeColor('red');" style="background-color: #FF0000;"></button>
+                  <button id="blue" class="radio" onclick="changeColor('blue');" style="background-color: #007bff;"></button>
+                  <button id="green" class="radio" onclick="changeColor('green');" style="background-color: #28a745;"></button>
+                  <button id="yellow" class="radio" onclick="changeColor('yellow');" style="background-color: #ffc107;"></button>
+                </div>
+          </div>
+
+          <div class="col-lg-8 my-auto" align="center">
+            <div id="graphContainer">
+              <canvas id="graphArea" class="image-responsive border border-dark" height="500px" width="500px">Your browser does not support HTML5</canvas>
+            </div>
+            <output for="range-slider" class="text-center"><h4 id="range-display"></h4></output>
+          </div>
+        </div>
+      </div>
+    <div style="height: 100px;"></div>
+    </main>
+
+    <footer class="fixed-bottom bg-dark text-light text-center">
+      <p>Credits</p>
+      <p>
+        <a>Christian Lisle</a>,
+        <a>Carter Brimeyer</a>,
+        <a>Carter Moseley</a>, and
+        <a>Kobe Hass</a>
+      </p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.4/qs.min.js" integrity="sha512-BHtomM5XDcUy7tDNcrcX1Eh0RogdWiMdXl3wJcKB3PFekXb3l5aDzymaTher61u6vEZySnoC/SAj2Y/p918Y3w==" crossorigin="anonymous"></script
+  </body>
+</html>

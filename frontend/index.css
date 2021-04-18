@@ -1,0 +1,55 @@
+@media (min-width: 1800px) {
+    .container{
+        max-width: 1800px;
+    }
+}
+
+body  {
+  min-height: 100vh; /*Prevent footer from overlapping page content*/
+}
+
+#logo {
+  max-height: 100px;
+}
+
+#equation_input {
+  float: left;
+  width: 100%;
+  min-width: 200px;
+}
+
+button.radio  {
+  width: 25px;
+  height: 25px;
+  border: none;
+  border-radius: 3px;
+}
+
+#range-slider {
+  -webkit-appearance: none;
+  float: left;
+  width: 100%;
+  max-width: 500px;
+  height: 10px;
+  margin: 0 auto;
+  border-radius: 1px;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+#range-slider::-moz-range-thumb, #range-slider::-webkit-slider-thumb {
+  width: 10px;
+  height: 20px;
+  border-radius: 15%;
+  background-color: #007bff;
+  cursor: pointer;
+}
+
+#graphArea  {
+  width: 100%;
+  max-width: 800px;
+  min-width: 200px;
+  margin: 0 auto;
+}
