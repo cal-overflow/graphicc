@@ -22,4 +22,4 @@ Kobe Hass
 
 Carter Brimeyer
 
-App URL: [https://eager-archimedes-6f5c73.netlify.app/](https://eager-archimedes-6f5c73.netlify.app/) (**Note**: graph functionality no longer works because the backend server is not hosted anymore)
+App URL: [https://graphicc.netlify.app/](https://eager-archimedes-6f5c73.netlify.app/) (**Note**: graph functionality no longer works because the backend server is not hosted anymore)
