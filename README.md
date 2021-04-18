@@ -10,10 +10,10 @@ Java, Spring Framework, and MySQL.
 
 ### Members:
 ##### Backend
-Carter Moseley
-Kobe Hass
+- Carter Moseley
+- Kobe Hass
 ##### Frontend
-[Christian Lisle](http://christianlisle.com)
-Carter Brimeyer
+- [Christian Lisle](http://christianlisle.com)
+- Carter Brimeyer
 
 App URL: [https://eager-archimedes-6f5c73.netlify.app/](https://eager-archimedes-6f5c73.netlify.app/)
